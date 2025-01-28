@@ -867,7 +867,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "broze":
        buttons = [[
             InlineKeyboardButton('🍁 𝗖𝗹𝗶𝗰𝗸 𝗔𝗹𝗹 𝗣𝗹𝗮𝗻𝘀 & 𝗣𝗿𝗶𝗰𝗲𝘀 🍁', callback_data='free')
-        ], [
+        ],[
             InlineKeyboardButton('• 𝗖𝗹𝗼𝘀𝗲 •', callback_data='close_data')
        ]]
        reply_markup = InlineKeyboardMarkup(buttons)
@@ -909,12 +909,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
               InlineKeyboardButton('Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs', callback_data='admincmd'),
               InlineKeyboardButton('Iᴍᴀɢᴇ Tᴏ Lɪɴᴋ', callback_data='telegraph'),
-              ],[
+	],[
               InlineKeyboardButton('F-Sᴜʙ', callback_data='fsub'),
               InlineKeyboardButton('Gʀᴏᴜᴘ Sᴇᴛᴜᴘ', callback_data='earn')
-              ],[
+	],[
               InlineKeyboardButton('⋞ Back To Home', callback_data='start')
-              ]]
+	]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
     
