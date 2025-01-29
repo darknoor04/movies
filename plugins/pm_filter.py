@@ -943,21 +943,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
       ]]
       reply_markup = InlineKeyboardMarkup(buttons)
     
-      await query.message.edit_media(
+      await client.edit_message_media(
+          chat_id=query.message.chat.id,
+          message_id=query.message.id,
             media=InputMediaPhoto(
             media=START_IMG,
             caption=script.ADMIN_CMD_TXT,
             parse_mode=enums.ParseMode.HTML
           ),
           reply_markup=reply_markup
-          )
+      )
 
     elif query.data == "admincmd2":
        buttons = [[
 	      InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='admincmd')]]
        reply_markup = InlineKeyboardMarkup(buttons)
     
-       await query.message.edit_media(
+       await client.edit_message_media(
+          chat_id=query.message.chat.id,
+          message_id=query.message.id,
             media=InputMediaPhoto(
             media=START_IMG,
             caption=script.ADMIN_CMD_TXT2,
