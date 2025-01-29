@@ -938,7 +938,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         return await query.answer('ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ꜰᴏʀ ʏᴏᴜ ʙʀᴏ!', show_alert=True)
     
       buttons = [[
-	      InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features'),
+	      InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='start'),
 	      InlineKeyboardButton('ɴᴇxᴛ ⪼', callback_data='admincmd2'),
       ]]
       reply_markup = InlineKeyboardMarkup(buttons)
@@ -974,7 +974,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         #add back button
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')],
-            [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')]]
+            [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='start')]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.FSUB_TXT,
@@ -1030,7 +1030,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        buttons = [[
 	      InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
        ],[
-              InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='features'),
+              InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='start'),
               InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Erro_support'),
        ]]
        reply_markup = InlineKeyboardMarkup(buttons)
@@ -1047,7 +1047,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
    
     elif query.data == "telegraph":
         buttons = [[
-            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
         await query.message.edit_text(
@@ -1057,7 +1057,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "font":
         buttons = [[
-            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons) 
         await query.message.edit_text(
