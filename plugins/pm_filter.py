@@ -944,15 +944,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
       reply_markup = InlineKeyboardMarkup(buttons)
     
       await client.edit_message_media(
-          chat_id=query.message.chat.id,
-          message_id=query.message.id,
-            media=InputMediaPhoto(
-            media=START_IMG,
-            caption=script.ADMIN_CMD_TXT,
-            parse_mode=enums.ParseMode.HTML
-          ),
-          reply_markup=reply_markup
-      )
+    chat_id=query.message.chat.id,
+    message_id=query.message.id,
+    media=InputMediaPhoto(
+        media="https://envs.sh/aW8.jpg",  # Replace with your image link
+        caption=script.ADMIN_CMD_TXT,
+        parse_mode=enums.ParseMode.HTML
+    ),
+    reply_markup=reply_markup
+)
 
     elif query.data == "admincmd2":
        buttons = [[
@@ -960,15 +960,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
        reply_markup = InlineKeyboardMarkup(buttons)
     
        await client.edit_message_media(
-          chat_id=query.message.chat.id,
-          message_id=query.message.id,
-            media=InputMediaPhoto(
-            media=START_IMG,
-            caption=script.ADMIN_CMD_TXT2,
-            parse_mode=enums.ParseMode.HTML
-          ),
-          reply_markup=reply_markup
-      )
+    chat_id=query.message.chat.id,
+    message_id=query.message.id,
+    media=InputMediaPhoto(
+        media="https://envs.sh/aW8.jpg",  # Replace with your image link
+        caption=script.ADMIN_CMD_TXT2,
+        parse_mode=enums.ParseMode.HTML
+    ),
+    reply_markup=reply_markup
+)
 	    
     elif query.data == "fsub":
         #add back button
